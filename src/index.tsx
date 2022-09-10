@@ -44,7 +44,7 @@ root.render(
           authType={"cookie"}
           authName={"_auth"}
           cookieDomain={window.location.hostname}
-          cookieSecure={window.location.protocol === "https:"}
+          cookieSecure
         >
           <Centered>
             <BrowserRouter>

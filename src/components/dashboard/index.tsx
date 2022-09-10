@@ -1,0 +1,3 @@
+function Dashboard() {}
+
+export { Dashboard };

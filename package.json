@@ -10,9 +10,17 @@
     "@types/node": "^16.11.58",
     "@types/react": "^18.0.19",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "baseui": "^12.1.2",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
+    "react-auth-kit": "^2.1.1",
     "react-dom": "^18.2.0",
+    "react-router-dom": "6",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "styletron-engine-atomic": "^1.5.0",
+    "styletron-react": "^6.1.0",
     "typescript": "^4.8.3",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
   }
 }

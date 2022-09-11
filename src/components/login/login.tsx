@@ -24,10 +24,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login(props: any) {
-  const signIn = useSignIn();
   const [error, setError] = useState("");
-
-  const navigate = useNavigate();
+  const signIn = useSignIn();
 
   const onSubmit = async (values: any) => {
     console.log("Values: ", values);
@@ -39,18 +37,12 @@ function Login(props: any) {
         values
       );
 
-      if (
-        signIn({
-          token: response.data.token,
-          expiresIn: 3600,
-          tokenType: "Bearer",
-          authState: values,
-        })
-      ) {
-        navigate("/");
-      } else {
-        throw new Error();
-      }
+      signIn({
+        token: response.data.token,
+        expiresIn: 3600,
+        tokenType: "Bearer",
+        authState: { email: values.email },
+      });
     } catch (err) {
       if (err && err instanceof AxiosError)
         setError(err.response?.data.message);
